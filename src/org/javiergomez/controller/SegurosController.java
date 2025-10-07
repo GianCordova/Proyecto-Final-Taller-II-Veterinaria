@@ -231,15 +231,17 @@ public class SegurosController implements Initializable {
     }
 
     private void cambiarEstadoCampos(boolean estado) {
-        txtIdMedicamento.setDisable(estado);
-        txtNombreMedicamento.setDisable(estado);
-        txtFinalidad.setDisable(estado);
-        txtDescripcion.setDisable(estado);
-        dpFechaVencimiento.setDisable(estado);
+        txtIdClienteDueño.setDisable(estado);
+        txtNombreSeguro.setDisable(estado);
+        txtTipoSeguro.setDisable(estado);
+        txtCobertura.setDisable(estado);
+        dpFechaInicio.setDisable(estado);
+        dpFechaFin.setDisable(estado);
+        txtIdClienteDueño.setDisable(estado);
     }
 
     private void habilitarDeshabilitarBotones() {
-        boolean desactivado = txtIdMedicamento.isDisable();
+        boolean desactivado = txtIdSeguro.isDisable();
         cambiarEstadoCampos(!desactivado);
 
         btnAnterior.setDisable(desactivado);
@@ -282,7 +284,7 @@ public class SegurosController implements Initializable {
         btnNuevo.setDisable(true);
         btnEditar.setDisable(true);
         btnEliminar.setDisable(true);
-        txtIdMedicamento.setDisable(true); 
+        txtIdSeguro.setDisable(true); 
     }
 
     @FXML
@@ -294,41 +296,39 @@ public class SegurosController implements Initializable {
         btnNuevo.setDisable(true);
         btnEditar.setDisable(true);
         btnEliminar.setDisable(true);
-        txtIdMedicamento.setDisable(true); 
+        txtIdSeguro.setDisable(true); 
     }
 
     @FXML
     private void btnEliminar() {
         tipoAccion = Accion.ELIMINAR;
-        eliminarMedicamento();
+        eliminarSeguro();
         tipoAccion = Accion.NINGUNA;
-        cargarTablaMedicamentos();
+        cargarTablaSeguros();
     }
 
     @FXML
     private void btnBuscar() {
-        buscarMedicamento();
+        buscarSeguros();
     }
 
     @FXML
     private void btnAnterior() {
-        int selectedIndex = tablaMedicamentos.getSelectionModel().getSelectedIndex();
+        int selectedIndex = tablaSeguros.getSelectionModel().getSelectedIndex();
         if (selectedIndex > 0) {
-            tablaMedicamentos.getSelectionModel().selectPrevious();
-            cargarMedicamentoSeleccionado();
+            tablaSeguros.getSelectionModel().selectPrevious();
+            cargarSeguroSeleccionado();
         }
     }
 
     @FXML
     private void btnSiguiente() {
-        int selectedIndex = tablaMedicamentos.getSelectionModel().getSelectedIndex();
-        if (selectedIndex < tablaMedicamentos.getItems().size() - 1) {
-            tablaMedicamentos.getSelectionModel().selectNext();
-            cargarMedicamentoSeleccionado();
+        int selectedIndex = tablaSeguros.getSelectionModel().getSelectedIndex();
+        if (selectedIndex < tablaSeguros.getItems().size() - 1) {
+            tablaSeguros.getSelectionModel().selectNext();
+            cargarSeguroSeleccionado();
         }
     }
 }
     
     
-    
-}
