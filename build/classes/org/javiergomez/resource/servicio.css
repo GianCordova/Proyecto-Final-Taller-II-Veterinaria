@@ -1,0 +1,91 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    /* Puedes añadir estilos generales para la escena principal aquí si es necesario */
+}
+
+.table-view {
+    -fx-font-family: "Arial", sans-serif; /* Cambiado a Arial o cualquier otra legible */
+    -fx-border-width: 0px; /* Eliminar borde alrededor de la tabla */
+    -fx-padding: 0px; /* Eliminar padding alrededor de la tabla */
+    -fx-background-color: #ffffff; /* Fondo blanco para la tabla */
+    -fx-border-color: transparent; /* Elimina borde alrededor de la tabla (duplicado, pero no molesta) */
+}
+
+/* Estilo para los encabezados de las columnas */
+.table-view .column-header .label {
+    -fx-text-fill: white; /* Texto blanco para mejor contraste con el color nuevo */
+    -fx-font-family: "Arial", sans-serif; /* Fuente legible para los encabezados */
+    -fx-background-color: #FCA311; /* Fondo con el color #FCA311 para los encabezados */
+    -fx-padding: 5px; /* Espaciado interno */
+}
+
+/* Eliminar borde de los encabezados de columna */
+.table-view .column-header {
+    -fx-border-color: transparent; /* Eliminar bordes alrededor de los encabezados */
+    -fx-border-width: 0px; /* Eliminar borde alrededor de los encabezados */
+    -fx-background-color: #FCA311; /* Fondo con el color #FCA311 para los encabezados */
+    -fx-padding: 0px; /* Eliminar padding alrededor de los encabezados */
+}
+
+/* Estilo para las celdas */
+.table-view .table-cell {
+    -fx-font-family: "Arial", sans-serif; /* Fuente legible para las celdas */
+    -fx-padding: 10px; /* Un poco de espacio dentro de las celdas */
+    -fx-background-color: #ffffff; /* Fondo blanco para las celdas */
+    -fx-border-color: transparent; /* Eliminar bordes de las celdas */
+}
+
+/* Cambiar el color de fondo de la primera columna */
+.table-view .table-column:nth-child(1) .table-cell {
+    -fx-background-color: #f2b5d4; /* Rosa claro */
+    -fx-text-fill: #FFFFFF; /* Texto blanco para contraste */
+}
+
+/* Cambiar el color de fondo de la segunda columna */
+.table-view .table-column:nth-child(2) .table-cell {
+    -fx-background-color: #a2d5f2; /* Azul claro */
+    -fx-text-fill: #333333; /* Texto oscuro */
+}
+
+/* Cambiar el color de fondo de la tercera columna */
+.table-view .table-column:nth-child(3) .table-cell {
+    -fx-background-color: #d0f2a2; /* Verde claro */
+    -fx-text-fill: #333333; /* Texto oscuro */
+}
+
+/* Cambiar el color de fondo de la cuarta columna */
+.table-view .table-column:nth-child(4) .table-cell {
+    -fx-background-color: #f9e79f; /* Amarillo pastel */
+    -fx-text-fill: #333333; /* Texto oscuro */
+}
+
+/* Cambiar el color de fondo de las filas cuando se pasa el mouse */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #e6e6e6; /* Fondo claro cuando pasa el mouse */
+}
+
+/* Estilo para la fila seleccionada - Asegurarse de que la selección sea visible */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #007acc !important; /* Fondo azul cuando se selecciona la fila */
+    -fx-text-fill: white !important; /* Texto blanco */
+    -fx-font-weight: bold !important; /* Negrita */
+}
+
+/* Estilo para filas intercaladas (blanco y gris) */
+.table-view .table-row-cell:nth-child(even) {
+    -fx-background-color: #f2f2f2; /* Gris claro para las filas pares */
+}
+
+.table-view .table-row-cell:nth-child(odd) {
+    -fx-background-color: #ffffff; /* Blanco para las filas impares */
+}
+
+/* Asegurarse de que la selección se vea bien en todo el componente, incluso en las celdas individuales */
+.table-view .table-row-cell:selected .table-cell {
+    -fx-background-color: #007acc !important; /* Fondo azul en la fila seleccionada */
+    -fx-text-fill: white !important; /* Texto blanco en la fila seleccionada */
+    -fx-font-weight: bold !important; /* Texto en negrita */
+}

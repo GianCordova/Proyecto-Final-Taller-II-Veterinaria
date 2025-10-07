@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.RegistrarseController">
+   <stylesheets>
+      <URL value="@../resource/Proyecto.css" />
+   </stylesheets>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#14213d" height="700.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e5e5" height="638.0" layoutX="76.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="749.0" />
+      <Button fx:id="btnIgrese" layoutX="493.0" layoutY="533.0" mnemonicParsing="false" onAction="#clickActionRegistrar" prefHeight="45.0" prefWidth="150.0" text="Ingresar">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <styleClass>
+            <String fx:value="lbIngresar" />
+            <String fx:value="tamano" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnregresar" layoutX="318.0" layoutY="533.0" mnemonicParsing="false" onAction="#clickActionRegistrar" prefHeight="45.0" prefWidth="150.0" text="⬅Regresar">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="lbIngresar" />
+            <String fx:value="tamano" />
+         </styleClass>
+      </Button>
+      <ImageView fitHeight="46.0" fitWidth="187.0" layoutX="400.0" layoutY="603.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Captcha-automaticamente-ANT.jpg" />
+         </image>
+      </ImageView>
+      <CheckBox layoutX="409.0" layoutY="598.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="118.0" />
+      <Label layoutX="357.0" layoutY="41.0" prefHeight="34.0" prefWidth="187.0" text="PetSync" textFill="#0b0b0b">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="199.0" fitWidth="178.0" layoutX="342.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/logo-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="248.0" layoutY="245.0" prefHeight="270.0" prefWidth="490.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="301.4000244140625" minWidth="10.0" prefWidth="152.40001220703124" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="472.5999755859375" minWidth="10.0" prefWidth="338.79998779296875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="60.8" minHeight="10.0" prefHeight="39.40000610351562" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="55.20001831054687" minHeight="0.0" prefHeight="48.19999389648437" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="53.60000000000001" minHeight="10.0" prefHeight="47.99999389648437" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.600006103515625" minHeight="10.0" prefHeight="49.59998168945313" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="58.40001831054687" minHeight="10.0" prefHeight="45.59996337890624" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="44.40003662109376" minHeight="10.0" prefHeight="44.40003662109376" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField prefHeight="40.0" prefWidth="249.0" promptText="root.root@gmail.com" styleClass="tamano" GridPane.columnIndex="1" />
+            <TextField prefHeight="40.0" prefWidth="249.0" styleClass="tamano" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField prefHeight="40.0" prefWidth="249.0" styleClass="tamano" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField prefHeight="40.0" prefWidth="249.0" styleClass="tamano" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField prefHeight="40.0" prefWidth="249.0" promptText="***********" styleClass="tamano" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <PasswordField prefHeight="40.0" prefWidth="249.0" promptText="***********" styleClass="tamano" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label prefHeight="21.0" prefWidth="144.0" text="Confirmar contraseña" textFill="#111111" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="77.0" text="Contraseña" textFill="#111111" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="77.0" text="Telefono" textFill="#111111" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="77.0" text="Apellido" textFill="#111111" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="77.0" text="Nombre" textFill="#111111" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="77.0" text="correo" textFill="#111111">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../resource/Proyecto.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.TratamientoMedicoController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass">
+         <stylesheets>
+            <URL value="@/org/javiergomez/resource/veterinarios.css" />
+         </stylesheets>
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="900.0" styleClass="mainFxmlClass">
+               <stylesheets>
+                  <URL value="@/org/javiergomez/resource/veterinario.css" />
+               </stylesheets>
+               <children>
+                  <BorderPane layoutX="-1.0" layoutY="1.0" prefHeight="600.0" prefWidth="900.0">
+                     <top>
+                        <Label text="Listado de Tratamiento Medico" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="21.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <Pane prefHeight="544.0" prefWidth="846.0" stylesheets="@../resource/servicio.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <TableView fx:id="tablaTratamientosMedicos" layoutX="7.0" layoutY="107.0" prefHeight="174.0" prefWidth="886.0">
+                                 <columns>
+                                    <TableColumn fx:id="colIdTratamientoMedicamento" prefWidth="106.4000244140625" text="idTratamientoMe" />
+                                    <TableColumn fx:id="colIdTratamiento" prefWidth="86.39996337890625" text="idTratamiento" />
+                                    <TableColumn fx:id="colIdMedicamento" prefWidth="100.0" text="idMedicamento" />
+                                    <TableColumn fx:id="colNombreTratamiento" prefWidth="285.59991455078125" text="nombreTratamiento" />
+                                    <TableColumn fx:id="colDescripcion" prefWidth="306.40008544921875" text="descripcion" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="re" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#cl" text="Regresar" />
+                              <GridPane layoutX="62.0" layoutY="335.0" prefHeight="149.0" prefWidth="760.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.20001220703125" minWidth="10.0" prefWidth="99.60001831054687" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.5999755859375" minWidth="10.0" prefWidth="188.3999816894531" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.5999755859375" minWidth="10.0" prefWidth="87.40003662109376" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="110.00002441406247" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.00006103515625" minWidth="10.0" prefWidth="282.60003662109375" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="idTratamientoMe" />
+                                    <Label text="idTratamiento" GridPane.rowIndex="1" />
+                                    <Label text="idMedicamento" GridPane.rowIndex="2" />
+                                    <Label text="nombreTratamiento" GridPane.columnIndex="3" />
+                                    <Label text="descripcion" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtIdTratamientoMedicamento" GridPane.columnIndex="1" />
+                                    <TextField fx:id="txtIdTratamiento" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtIdMedicamento" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtNombreTratamiento" GridPane.columnIndex="4" />
+                                    <ComboBox fx:id="cbxTratamiento" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <ComboBox fx:id="cbxMedicamento" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                    <TextArea fx:id="txtDescripcion" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <Button fx:id="btnAnterior" layoutX="36.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnAnterior" text="&lt;&lt;" />
+                              <Button fx:id="btnSiguiente" layoutX="101.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnSiguiente" text="&gt;&gt;" />
+                              <Button fx:id="btnNuevo" layoutX="564.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnNuevo" text="nuevo" />
+                              <Button fx:id="btnEditar" layoutX="637.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnEditar" text="editar" />
+                              <Button fx:id="btnEliminar" layoutX="709.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnEliminar" text="eliminar" />
+                              <Button fx:id="btnGuardar" layoutX="424.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnGuardar" text="Guardar" />
+                              <Button fx:id="btnCancelar" layoutX="530.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnCancelar" text="Cancelar" />
+                              <Button layoutX="167.0" layoutY="71.0" mnemonicParsing="false" onAction="#btnBuscar" text="Buscar" />
+                              <TextField fx:id="txtBuscar" layoutX="14.0" layoutY="71.0" />
+                           </children>
+                        </Pane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <styleClass>
+      <String fx:value="mainFxmlClass" />
+      <String fx:value="fondo2" />
+   </styleClass>
+</AnchorPane>

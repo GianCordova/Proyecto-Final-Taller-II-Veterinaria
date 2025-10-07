@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.PantallaInicioController">
+   <children>
+      <MenuBar prefHeight="27.0" prefWidth="900.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="btnIniciarSesion" mnemonicParsing="false" onAction="#clickActionSecion" text="Inicio de secion" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="683.0" fitWidth="528.0" layoutX="-2.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/animales.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="719.0" fitWidth="528.0" layoutX="372.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/animales.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="683.0" fitWidth="342.0" layoutX="258.0" layoutY="27.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/color.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="683.0" fitWidth="276.0" layoutX="372.0" layoutY="28.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/color.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="258.0" layoutY="162.0" prefHeight="74.0" prefWidth="407.0" text="Bienvenidos">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="55.0" />
+         </font>
+      </Label>
+      <Label layoutX="321.0" layoutY="251.0" prefHeight="38.0" prefWidth="257.0" text="Veterinaria PetSync">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="ingresar" layoutX="362.0" layoutY="369.0" mnemonicParsing="false" onAction="#clickActionSecion" prefHeight="58.0" prefWidth="169.0" stylesheets="@../resource/Proyecto.css" text="Iniciar Secion">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+         <styleClass>
+            <String fx:value="boton" />
+            <String fx:value="tamano" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="fondo2" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.RecetaMedicamentoController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass">
+         <stylesheets>
+            <URL value="@/org/javiergomez/resource/veterinarios.css" />
+         </stylesheets>
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="900.0" styleClass="mainFxmlClass">
+               <stylesheets>
+                  <URL value="@/org/javiergomez/resource/veterinario.css" />
+               </stylesheets>
+               <children>
+                  <BorderPane layoutX="-1.0" layoutY="1.0" prefHeight="600.0" prefWidth="900.0">
+                     <top>
+                        <Label text="Listado de Receta Medicamento" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="21.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <Pane prefHeight="544.0" prefWidth="846.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TableView fx:id="tablaRecetasMedicamentos" layoutX="7.0" layoutY="107.0" prefHeight="174.0" prefWidth="886.0">
+                                 <columns>
+                                    <TableColumn fx:id="colIdRecetaMedicamento" prefWidth="94.4000244140625" text="idMedicamento" />
+                                    <TableColumn fx:id="colIdReceta" prefWidth="54.4000244140625" text="idReceta" />
+                                    <TableColumn fx:id="colIdMedicamento" prefWidth="95.20001220703125" text="idMedicamento" />
+                                    <TableColumn fx:id="colCantidad" prefWidth="99.99993896484375" text="cantidad" />
+                                    <TableColumn fx:id="colDosis" prefWidth="104.800048828125" text="dosis" />
+                                    <TableColumn fx:id="colFrecuencia" prefWidth="191.20001220703125" text="frecuencia" />
+                                    <TableColumn fx:id="colObservaciones" prefWidth="256.0" text="observaciones" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="re" layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#cl" text="Regresar" />
+                              <GridPane layoutX="35.0" layoutY="335.0" prefHeight="172.0" prefWidth="787.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.20001220703125" minWidth="10.0" prefWidth="88.19999389648437" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.5999755859375" minWidth="10.0" prefWidth="205.8000061035156" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.5999755859375" minWidth="10.0" prefWidth="87.40003662109376" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="110.00002441406247" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.00006103515625" minWidth="10.0" prefWidth="282.60003662109375" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="41.60001220703124" minHeight="10.0" prefHeight="41.60001220703124" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="49.60004272460938" minHeight="10.0" prefHeight="36.60002441406249" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="24.79993286132813" minHeight="0.0" prefHeight="11.999975585937506" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="idMedicamento" />
+                                    <Label text="idReceta" GridPane.rowIndex="1" />
+                                    <Label text="idMedicamento" GridPane.rowIndex="2" />
+                                    <Label text="cantidad" GridPane.rowIndex="3" />
+                                    <Label text="dosis" GridPane.columnIndex="3" />
+                                    <Label text="frecuencia" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <Label text="observaciones" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtIdRecetaMedicamento" GridPane.columnIndex="1" />
+                                    <TextField fx:id="txtIdReceta" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtIdMedicamento" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtCantidad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtDosis" GridPane.columnIndex="4" />
+                                    <TextField fx:id="txtFrecuencia" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="cbxReceta" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <ComboBox fx:id="cbxMedicamento" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                    <TextArea fx:id="txtObservaciones" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Button fx:id="btnAnterior" layoutX="36.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnAnterior" styleClass="lbIngresar" stylesheets="@../resource/Proyecto.css" text="&lt;&lt;" />
+                              <Button fx:id="btnSiguiente" layoutX="101.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnSiguiente" styleClass="lbIngresar" stylesheets="@../resource/Proyecto.css" text="&gt;&gt;" />
+                              <Button fx:id="btnNuevo" layoutX="564.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnNuevo" styleClass="boton" stylesheets="@../resource/Proyecto.css" text="nuevo" />
+                              <Button fx:id="btnEditar" layoutX="637.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnEditar" styleClass="boton" stylesheets="@../resource/Proyecto.css" text="editar" />
+                              <Button fx:id="btnEliminar" layoutX="709.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnEliminar" styleClass="lbIngresar2" stylesheets="@../resource/Proyecto.css" text="eliminar" />
+                              <Button fx:id="btnGuardar" layoutX="424.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnGuardar" styleClass="boton" stylesheets="@../resource/Proyecto.css" text="Guardar" />
+                              <Button fx:id="btnCancelar" layoutX="530.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnCancelar" styleClass="lbIngresar2" stylesheets="@../resource/Proyecto.css" text="Cancelar" />
+                              <Button layoutX="167.0" layoutY="71.0" mnemonicParsing="false" onAction="#btnBuscar" text="Buscar" />
+                              <TextField fx:id="txtBuscar" layoutX="14.0" layoutY="71.0" />
+                           </children>
+                        </Pane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../resource/servicio.css" />
+      <URL value="@../resource/Proyecto.css" />
+   </stylesheets>
+</AnchorPane>
