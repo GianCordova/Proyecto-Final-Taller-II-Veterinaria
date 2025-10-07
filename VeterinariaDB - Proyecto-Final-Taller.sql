@@ -223,14 +223,14 @@ create table TratamientosMedicamentos(
 );
 
 create table Seguros (
-    idseguro int auto_increment primary key,
-    nombreseguro varchar(64) not null,     
-    tiposeguro varchar(64) not null,     
-    cobertura text,                     
-    fechainicio date not null,           
-    fechafin date not null,               
+    idSeguro int auto_increment primary key,
+    nombreSeguro varchar(64) not null,     
+    tipoSeguro varchar(64) not null,     
+    cobertura varchar (64),                     
+    fechaInicio date not null,           
+    fechaFin date not null,               
     costo decimal(10,2) not null,          
-    idclientedueño int,                    
+    idClientedueño int,                    
     foreign key (idclientedueño) references clientesdueños(idclientedueño)
 );
 
