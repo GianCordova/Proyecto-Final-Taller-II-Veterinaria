@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.javiergomez.controller.AdopcionController">
+    <stylesheets>
+        <URL value="@/org/javiergomez/resource/adopcion.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="900.0" styleClass="mainFxmlClass">
+         <stylesheets>
+            <URL value="@/org/javiergomez/resource/mascotas.css" />
+         </stylesheets>
+         <children>
+            <Label layoutX="189.0" layoutY="48.0" prefHeight="70.0" prefWidth="523.0" text="Adopcion Mascotas">
+               <font>
+                  <Font name="Arial Black" size="46.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="200.0" fitWidth="156.0" layoutX="14.0" layoutY="191.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/perro.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="166.0" layoutX="179.0" layoutY="191.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/gato.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="166.0" layoutX="357.0" layoutY="191.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/pajaro.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="166.0" layoutX="534.0" layoutY="191.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/conejo.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="194.0" fitWidth="166.0" layoutX="713.0" layoutY="191.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../image/huella.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="perro" layoutX="27.0" layoutY="481.0" mnemonicParsing="false" onAction="#click" prefHeight="78.0" prefWidth="142.0" text="Perro" />
+            <Button fx:id="otros" layoutX="725.0" layoutY="481.0" mnemonicParsing="false" onAction="#click" prefHeight="78.0" prefWidth="142.0" text="Otros" />
+            <Button fx:id="gato" layoutX="203.0" layoutY="481.0" mnemonicParsing="false" onAction="#click" prefHeight="78.0" prefWidth="141.0" text="Gato" />
+            <Button fx:id="pajaro" layoutX="379.0" layoutY="481.0" mnemonicParsing="false" onAction="#click" prefHeight="78.0" prefWidth="142.0" text="Pajaro" />
+            <Button fx:id="btnanimal" layoutX="546.0" layoutY="481.0" mnemonicParsing="false" onAction="#click" prefHeight="78.0" prefWidth="142.0" text="Conejo" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

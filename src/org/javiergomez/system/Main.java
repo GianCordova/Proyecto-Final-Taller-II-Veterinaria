@@ -5,10 +5,17 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import org.javiergomez.controller.AdopcionConejoController;
+import org.javiergomez.controller.AdopcionController;
+import org.javiergomez.controller.AdopcionGatoController;
+import org.javiergomez.controller.AdopcionOtrosController;
+import org.javiergomez.controller.AdopcionPajaroController;
+import org.javiergomez.controller.AdopcionPerroController;
 import org.javiergomez.controller.AnimalitosController;
 import org.javiergomez.controller.CitasController;
 import org.javiergomez.controller.ComprasController;
 import org.javiergomez.controller.ConsultasController;
+import org.javiergomez.controller.ContactoAdoptameController;
 import org.javiergomez.controller.ContactoController;
 import org.javiergomez.controller.FacturaCompraController;
 import org.javiergomez.controller.FacturasController;
@@ -198,4 +205,34 @@ public class Main extends Application {
         TratamientoMedicoController pc = cambiarEscena("TratamientoMedico.fxml", 900, 700).getController();
         pc.setPrincipal(this);
     }
+       public void Adopcion() {
+        AdopcionController pc = cambiarEscena("Adopcion.fxml", 900, 700).getController();
+        pc.setPrincipal(this);
+    }
+       
+        public void AdopcionPerro() {
+        AdopcionPerroController pc = cambiarEscena("AdopcionPerro.fxml", 900, 700).getController();
+        pc.setPrincipal(this);
+    }
+         public void AdopcionGato() {
+        AdopcionGatoController pc = cambiarEscena("AdopcionGato.fxml", 900, 700).getController();
+        pc.setPrincipal(this);
+    }
+          public void AdopcionPajaro() {
+        AdopcionPajaroController pc = cambiarEscena("AdopcionPajaro.fxml", 900, 700).getController();
+        pc.setPrincipal(this);
+    }
+           public void AdopcionConejo() {
+        AdopcionConejoController pc = cambiarEscena("AdopcionConejo.fxml", 900, 700).getController();
+        pc.setPrincipal(this);
+    }
+            public void AdopcionOtros() {
+        AdopcionOtrosController pc = cambiarEscena("AdopcionOtros.fxml", 900, 700).getController();
+        pc.setPrincipal(this);
+    }
+            public void ContactoAdoptame() {
+        ContactoAdoptameController pc = cambiarEscena("ContactoAdoptame.fxml", 900, 700).getController();
+        pc.setPrincipal(this);
+    }
+
 }
