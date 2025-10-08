@@ -234,6 +234,15 @@ create table Seguros (
     foreign key (idClienteDueño) references ClientesDueños(idClienteDueño)
 );
 
+create table Usuarios (
+    idUsuario int auto_increment primary key,
+    correo varchar(128) not null unique,
+    contraseña varchar(255) not null,
+    rol enum('admin', 'cliente') not null,
+    idClienteDueño int,
+    foreign key (idClienteDueño) references ClientesDueños(idClienteDueño)
+);
+
 -- __________________________Procedimientos almacenados____________________________________________
 -- __________________________Procedimineto de ClientesDueños_______________________________________
 delimiter //
@@ -1480,3 +1489,9 @@ call sp_agregarSeguro('Seguro de Vida', 'Vida', 'Cobertura médica integral', '2
 call sp_actualizarSeguro(1, 'Seguro de Vida', 'Vida', 'Cobertura mejorada en caso de accidente o muerte', '2025-01-01', '2025-12-31', 1300.00, 1);
 -- call sp_eliminarsSeguro(1);
 call sp_listarSeguros();
+
+INSERT INTO Usuarios (correo, contraseña, rol, idClienteDueño) VALUES
+( 'javier@gmail.com', 'contraseña123', 'admin',1),
+('giancarlo@gmail.com', 'contraseña123', 'cliente',1);
+ 
+select * from Usuarios;
