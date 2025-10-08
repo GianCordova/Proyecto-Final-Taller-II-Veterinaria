@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
+import org.javiergomez.model.Seguros;
 import org.javiergomez.system.Main;
 
 /**
@@ -20,7 +21,7 @@ public class MenuPrincipalController implements Initializable {
     @FXML
     private Button servicio,btnInicio, btnServicio,bntVete,btnmascota,btnplanes
             ,btnVTN,btnMT,btnMDT,btnGT,btnAnimalito,Tratamientos,Veterinarios,Consultas,Recetas,Compras,Vacunaciones,Citas,Facturas
-,FacturaCompra,RecetaMedicamento,TratamientoMedico,Adopcion;
+,FacturaCompra,RecetaMedicamento,TratamientoMedico,Adopcion, Seguros;
 
     public void setPrincipal(Main principal) {
         this.principal = principal;
@@ -104,6 +105,9 @@ public class MenuPrincipalController implements Initializable {
     }else if (evento.getSource() == Adopcion) {
             System.out.println("animal ");
             principal.Adopcion();
+    }else if (evento.getSource() == Seguros) {
+            System.out.println("Vamos a Seguros ");
+            principal.Seguros();
     }
 }
 }

@@ -231,7 +231,7 @@ create table Seguros (
     fechaFin date not null,               
     costo decimal(10,2) not null,          
     idClientedueño int,                    
-    foreign key (idclientedueño) references clientesdueños(idclientedueño)
+    foreign key (idClienteDueño) references ClientesDueños(idClienteDueño)
 );
 
 -- __________________________Procedimientos almacenados____________________________________________
@@ -1304,12 +1304,12 @@ delimiter ;
 
 
 delimiter //
-create procedure sp_eliminarsSeguro(in p_idseguro int)
-begin
-    update seguros
-    set estado = 'inactivo'
-    where idseguro = p_idseguro;
-end //
+	create procedure sp_eliminarsSeguro(in p_idSeguro int)
+		begin
+			delete 
+            from Seguros
+            where idSeguro = p_idSeguro;
+        end//
 delimiter ;
 
 -- ClientesDueños

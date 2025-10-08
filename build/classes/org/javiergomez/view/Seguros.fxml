@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.javiergomez.controller.SegurosController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.SegurosController">
     <stylesheets>
         <URL value="@/org/javiergomez/resource/seguros.css" />
     </stylesheets>
@@ -120,16 +120,16 @@
                            <bottom>
                               <Pane prefHeight="544.0" prefWidth="846.0" stylesheets="@../resource/servicio.css" BorderPane.alignment="CENTER">
                                  <children>
-                                    <TableView fx:id="tablaMedicamentos1" layoutX="7.0" layoutY="111.0" prefHeight="174.0" prefWidth="900.0">
+                                    <TableView fx:id="tablaSeguros" layoutX="7.0" layoutY="111.0" prefHeight="174.0" prefWidth="900.0">
                                        <columns>
-                                          <TableColumn fx:id="colIdMedicamento1" prefWidth="37.0" text="ID" />
-                                          <TableColumn fx:id="colNombreMedicamento1" prefWidth="136.0" text="Nombre Seguro" />
-                                          <TableColumn fx:id="colFinalidad1" prefWidth="157.0" text="Tipo de Seguro" />
-                                          <TableColumn fx:id="colDescripcion1" prefWidth="174.0" text="Cobertura" />
-                                          <TableColumn fx:id="colFechaVencimiento1" prefWidth="124.0" text="Fecha de Inicio" />
-                                          <TableColumn fx:id="colFechaVencimiento11" prefWidth="120.0" text="Fecha Fin" />
-                                          <TableColumn fx:id="colFechaVencimiento111" text="Costo" />
-                                          <TableColumn fx:id="colFechaVencimiento1111" prefWidth="72.0" text="ID Dueño" />
+                                          <TableColumn fx:id="colIdSeguro" prefWidth="37.0" text="ID" />
+                                          <TableColumn fx:id="colNombreSeguro" prefWidth="136.0" text="Nombre Seguro" />
+                                          <TableColumn fx:id="colTipoSeguro" prefWidth="157.0" text="Tipo de Seguro" />
+                                          <TableColumn fx:id="colCobertura" prefWidth="174.0" text="Cobertura" />
+                                          <TableColumn fx:id="colFechaInicio" prefWidth="124.0" text="Fecha de Inicio" />
+                                          <TableColumn fx:id="colFechaFin" prefWidth="120.0" text="Fecha Fin" />
+                                          <TableColumn fx:id="colCosto" text="Costo" />
+                                          <TableColumn fx:id="colIdClienteDueño" prefWidth="72.0" text="ID Dueño" />
                                        </columns>
                                     </TableView>
                                     <Button fx:id="re" mnemonicParsing="false" onAction="#cl" prefHeight="31.0" prefWidth="95.0" text="&lt; Regresar" />
