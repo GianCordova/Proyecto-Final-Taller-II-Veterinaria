@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="859.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.VeterinariosController">
+    <stylesheets>
+        <URL value="@/org/javiergomez/resource/veterinarios.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="890.0" stylesheets="@../resource/Proyecto.css">
+         <children>
+            <BorderPane layoutX="-11.0" layoutY="22.0" prefHeight="612.0" prefWidth="890.0">
+               <top>
+                  <Label text="Listado de Veterinarios" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                  </Label>
+               </top>
+               <right>
+                  <Pane prefHeight="582.0" prefWidth="982.0" stylesheets="@../resource/servicio.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="tablaVeterinarios" layoutX="49.0" layoutY="106.0" prefHeight="174.0" prefWidth="884.0">
+                           <columns>
+                              <TableColumn fx:id="colIdVeterinarios" prefWidth="80.79998397827148" text="idVeterinario" />
+                              <TableColumn fx:id="colNombreVeterinarios" prefWidth="238.40000915527344" text="nombreVeterinario" />
+                              <TableColumn fx:id="colApellidoVeterinarios" prefWidth="263.20001220703125" text="apellidoVeterinario" />
+                              <TableColumn fx:id="colIdEmpleado" minWidth="7.20001220703125" prefWidth="75.20001220703125" text="idEmpleado" />
+                              <TableColumn fx:id="colSueldo" prefWidth="228.7999267578125" text="sueldo" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="re" layoutX="37.0" layoutY="2.0" mnemonicParsing="false" onAction="#cl" text="Regresar" />
+                        <GridPane layoutX="57.0" layoutY="335.0" prefHeight="149.0" prefWidth="765.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.20001220703125" minWidth="10.0" prefWidth="47.8" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.5999755859375" minWidth="10.0" prefWidth="242.2" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.5999755859375" minWidth="10.0" prefWidth="87.40003662109376" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="110.00002441406247" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.00006103515625" minWidth="10.0" prefWidth="282.60003662109375" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="ID" />
+                              <Label text="Nombre" GridPane.rowIndex="1" />
+                              <Label text="Apellido" GridPane.rowIndex="2" />
+                              <Label text="idEmpleado" GridPane.columnIndex="3" />
+                              <Label text="sueldo" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtIDVeterinarios" GridPane.columnIndex="1" />
+                              <TextField fx:id="txtnombreVeterinarios" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtapellidoVeterinarios" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtIDEmpleado" GridPane.columnIndex="4" />
+                              <TextField fx:id="txtSueldo" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="cbxEmpleado" prefHeight="26.0" prefWidth="256.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="btnAnterior" layoutX="36.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnAnterior" text="&lt;&lt;" />
+                        <Button fx:id="btnSiguiente" layoutX="101.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnSiguiente" text="&gt;&gt;" />
+                        <Button fx:id="btnNuevo" layoutX="564.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnNuevo" text="nuevo" />
+                        <Button fx:id="btnEditar" layoutX="637.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnEditar" text="editar" />
+                        <Button fx:id="btnEliminar" layoutX="709.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnEliminar" text="eliminar" />
+                        <Button fx:id="btnGuardar" layoutX="424.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnGuardar" text="Guardar" />
+                        <Button fx:id="btnCancelar" layoutX="530.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnCancelar" text="Cancelar" />
+                        <Button layoutX="197.0" layoutY="71.0" mnemonicParsing="false" onAction="#btnBuscar" text="Buscar" />
+                        <TextField fx:id="txtBuscar" layoutX="43.0" layoutY="71.0" />
+                        <Button fx:id="VerCita" layoutX="88.0" layoutY="487.0" mnemonicParsing="false" onAction="#cl" prefHeight="67.0" prefWidth="184.0" text="VER CITAS ">
+                           <font>
+                              <Font name="Britannic Bold" size="23.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </right>
+            </BorderPane>
+         </children>
+         <styleClass>
+            <String fx:value="mainFxmlClass" />
+            <String fx:value="fondo2" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</AnchorPane>

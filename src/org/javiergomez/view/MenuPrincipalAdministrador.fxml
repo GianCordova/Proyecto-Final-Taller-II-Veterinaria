@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.javiergomez.controller.MenuPrincipalAdministradorController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="900.0" styleClass="fondo2" stylesheets="@../resource/Proyecto.css">
+         <children>
+            <Button fx:id="btnInicio" layoutX="404.0" layoutY="622.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="64.0" prefWidth="194.0" stylesheets="@../resource/Proyecto.css" text="Inicio" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="boton" />
+                  <String fx:value="fondo" />
+                  <String fx:value="tamano" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+            </Button>
+            <Label layoutX="143.0" layoutY="29.0" styleClass="h1" stylesheets="@../resource/Proyecto.css" text="Menu Principal admin" textFill="#00796b">
+               <font>
+                  <Font name="Arial Black" size="51.0" />
+               </font>
+            </Label>
+            <Button fx:id="Consultas" layoutX="344.0" layoutY="133.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="📱Consultas" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="RecetaMedicamento" layoutX="567.0" layoutY="133.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="194.0" stylesheets="@../resource/Proyecto.css" text="🖍RecetaMedicamento" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnGT" layoutX="118.0" layoutY="133.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="👨‍💼Proveedor" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Facturas" layoutX="578.0" layoutY="298.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="🧾Facturas" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAnimalito" layoutX="392.0" layoutY="455.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="🐱Mascotas" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="TratamientoMedico" layoutX="158.0" layoutY="455.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="🩺TratamientoMedico" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="servicio" layoutX="629.0" layoutY="455.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="📂Servicio" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Veterinarios" layoutX="102.0" layoutY="215.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="🧑‍⚕️Veterinarios" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMDT" layoutX="328.0" layoutY="215.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="🩹Medicamentos" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="FacturaCompra" layoutX="304.0" layoutY="380.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="280.0" stylesheets="@../resource/Proyecto.css" text="🧾FacturaCompra" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Recetas" layoutX="621.0" layoutY="380.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="📝Recetas" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Vacunaciones" layoutX="143.0" layoutY="298.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="💉Vacunaciones" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Citas" layoutX="82.0" layoutY="380.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="📄Citas" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnVTN" layoutX="528.0" layoutY="530.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="🧑‍ ClientesDueños" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMT" layoutX="288.0" layoutY="530.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="👨‍💻 Empleados" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Tratamientos" layoutX="543.0" layoutY="215.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="🩺Tratamientos" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Compras" layoutX="369.0" layoutY="298.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="186.0" stylesheets="@../resource/Proyecto.css" text="🛒Compras" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="tamano" />
+                  <String fx:value="fondo" />
+                  <String fx:value="boton" />
+                  <String fx:value="menu-button" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 abr 2025, 07:30:02
+    Author     : informatica
+*/
+
+.lbIngresar:hover{
+    -fx-text-fill: #FCA311;
+}
+.fondo{
+    -fx-background-color: #e5e5e5
+}
+.tamano{
+    -fx-background-radius: 15
+}
+
+.tipo{
+    -fx-font-family: system
+    
+}
+.tipos{
+    -fx-font-family: Copperplate Gothic Bold
+}      
+ .boton:hover{
+   -fx-text-fill: #32CD32;
+}
+.lbIngresar2:hover{
+    -fx-text-fill: #FF0000;
+} 
+.fondo2{
+    -fx-background-color:  #E0F7FA
+}
+
+
+
+.menu-button {
+  -fx-background-color: #00796B;
+
+
+}

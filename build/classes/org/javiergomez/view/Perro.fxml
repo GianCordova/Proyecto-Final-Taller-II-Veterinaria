@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.javiergomez.controller.PerroController">
+    <stylesheets>
+        <URL value="@/org/javiergomez/resource/perro.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="224.0" layoutY="24.0" text="Plan perro">
+         <font>
+            <Font name="Arial Black" size="34.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="14.0" layoutY="62.0" prefHeight="310.0" prefWidth="310.0">
+         <children>
+            <Text layoutX="17.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4 desparasitaciones">
+               <font>
+                  <Font name="Arial Black" size="19.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="16.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 vacuna contra la rabia">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="16.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 vacuna contra leucemia">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 consulta al año">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="16.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 diagnóstico renal">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="12.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15% off servicios Dana">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="16.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10% de descuento en Farmacia Dana en compras a partir de Q200." wrappingWidth="239.044921875">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="12.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25% off en el ingreso por emergencia">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="221.0" fitWidth="258.0" layoutX="336.0" layoutY="88.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/cachorros.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="perro" layoutX="397.0" layoutY="327.0" mnemonicParsing="false" onAction="#click" prefHeight="51.0" prefWidth="134.0" text="&lt; Regresar" />
+   </children>
+</AnchorPane>

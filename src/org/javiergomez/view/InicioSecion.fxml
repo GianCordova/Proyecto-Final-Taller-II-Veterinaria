@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="fondo" stylesheets="@../resource/Proyecto.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.InicioSecionController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" depthTest="ENABLE" fill="#e0f7fad9" height="700.0" layoutX="-2.0" layoutY="-1.0" stroke="BLACK" width="909.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00796b" height="424.0" layoutX="54.0" layoutY="252.0" stroke="BLACK" strokeType="INSIDE" styleClass="tamano" width="798.0" />
+      <Button fx:id="btnIngresar" layoutX="284.0" layoutY="554.0" mnemonicParsing="false" onAction="#clickActionHandler" prefHeight="60.0" prefWidth="150.0" text="Ingresar">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../resource/Proyecto.css" />
+            <URL value="@../resource/Proyecto.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="tamano" />
+            <String fx:value="boton" />
+         </styleClass>
+      </Button>
+      <Label layoutX="339.0" layoutY="24.0" prefHeight="22.0" prefWidth="253.0" text="PetSync">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="394.0" prefHeight="36.0" prefWidth="96.0" text="Usuario" textFill="#111111">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="173.0" layoutY="471.0" prefHeight="36.0" prefWidth="132.0" text="Contraseña" textFill="#030303">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegresar" layoutX="39.0" layoutY="21.0" mnemonicParsing="false" onAction="#clickActionHandler" prefHeight="60.0" prefWidth="150.0" text="⬅Regresar" textFill="#fafafa">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../resource/Proyecto.css" />
+            <URL value="@../resource/Proyecto.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="tamano" />
+            <String fx:value="lbIngresar2" />
+            <String fx:value="menu-button" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnCrear" layoutX="486.0" layoutY="554.0" mnemonicParsing="false" onAction="#clickActionHandler" prefHeight="60.0" prefWidth="150.0" stylesheets="@../resource/Proyecto.css" text="Crear cuenta">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <styleClass>
+            <String fx:value="tamano" />
+            <String fx:value="boton" />
+         </styleClass>
+      </Button>
+      <PasswordField fx:id="txtContrasena" layoutX="332.0" layoutY="464.0" onAction="#clickActionHandler" prefHeight="46.0" prefWidth="266.0" promptText="***********" styleClass="tamano" />
+      <TextField fx:id="txtCorreo" layoutX="333.0" layoutY="387.0" onAction="#clickActionHandler" prefHeight="46.0" prefWidth="265.0" promptText="root.root@gmail.com" styleClass="tamano" />
+      <ImageView fitHeight="294.0" fitWidth="254.0" layoutX="308.0" layoutY="67.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/inicio-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

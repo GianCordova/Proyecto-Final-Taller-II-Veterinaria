@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.PlanesController">
+    <stylesheets>
+        <URL value="@/org/javiergomez/resource/planes.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="312.0" layoutY="25.0" prefHeight="70.0" prefWidth="275.0" text="Planes de salud">
+         <font>
+            <Font name="Arial Black" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnPerro" layoutX="116.0" layoutY="398.0" mnemonicParsing="false" onAction="#click" prefHeight="86.0" prefWidth="195.0" stylesheets="@../resource/Proyecto.css" text="Plan para perro">
+         <styleClass>
+            <String fx:value="lbIngresar" />
+            <String fx:value="tamano" />
+         </styleClass></Button>
+      <Button fx:id="btngato" layoutX="524.0" layoutY="398.0" mnemonicParsing="false" onAction="#click" prefHeight="86.0" prefWidth="195.0" stylesheets="@../resource/Proyecto.css" text="Plan para gato">
+         <styleClass>
+            <String fx:value="lbIngresar" />
+            <String fx:value="tamano" />
+         </styleClass></Button>
+      <ImageView fitHeight="251.0" fitWidth="325.0" layoutX="63.0" layoutY="96.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/perro.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="251.0" fitWidth="325.0" layoutX="459.0" layoutY="96.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../image/gato.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="regresar" layoutX="337.0" layoutY="549.0" mnemonicParsing="false" onAction="#click" prefHeight="86.0" prefWidth="195.0" stylesheets="@../resource/Proyecto.css" text="&lt; Regresar">
+         <styleClass>
+            <String fx:value="lbIngresar2" />
+            <String fx:value="tamano" />
+         </styleClass></Button>
+   </children>
+</AnchorPane>
