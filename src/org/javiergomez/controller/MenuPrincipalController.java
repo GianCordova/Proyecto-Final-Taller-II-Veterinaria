@@ -20,7 +20,7 @@ public class MenuPrincipalController implements Initializable {
     @FXML
     private Button servicio,btnInicio, btnServicio,bntVete,btnmascota,btnplanes
             ,btnVTN,btnMT,btnMDT,btnGT,btnAnimalito,Tratamientos,Veterinarios,Consultas,Recetas,Compras,Vacunaciones,Citas,Facturas
-,FacturaCompra,RecetaMedicamento,TratamientoMedico;
+,FacturaCompra,RecetaMedicamento,TratamientoMedico,Adopcion;
 
     public void setPrincipal(Main principal) {
         this.principal = principal;
@@ -101,6 +101,9 @@ public class MenuPrincipalController implements Initializable {
     }else if (evento.getSource() == TratamientoMedico) {
             System.out.println("animal ");
             principal.TratamientoMedico();
+    }else if (evento.getSource() == Adopcion) {
+            System.out.println("animal ");
+            principal.Adopcion();
     }
 }
 }

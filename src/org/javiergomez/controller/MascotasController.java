@@ -26,7 +26,8 @@ public class MascotasController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }  @FXML
+    }
+    @FXML
     private void click(ActionEvent evento) {
         if (evento.getSource() == btnanimal) {
             System.out.println("Enviado a servicios");
