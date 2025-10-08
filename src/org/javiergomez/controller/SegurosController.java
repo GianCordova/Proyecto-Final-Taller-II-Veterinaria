@@ -86,7 +86,7 @@ public class SegurosController implements Initializable {
         colFechaInicio.setCellValueFactory(new PropertyValueFactory<Seguros, LocalDate>("fechaInicio"));
         colFechaFin.setCellValueFactory(new PropertyValueFactory<Seguros, LocalDate>("fechaFin"));
         colCosto.setCellValueFactory(new PropertyValueFactory<Seguros, Double>("costo"));
-        colIdClienteDueño.setCellValueFactory(new PropertyValueFactory<Seguros, Integer>("idClientedueño"));
+        colIdClienteDueño.setCellValueFactory(new PropertyValueFactory<Seguros, Integer>("idClienteDueno"));
     }
 
     private void cargarTablaSeguros() {
@@ -132,7 +132,7 @@ public class SegurosController implements Initializable {
             txtCosto.setText(String.valueOf(seguro.getCosto()));
             dpFechaInicio.setValue(seguro.getFechaInicio());
             dpFechaFin.setValue(seguro.getFechaFin());
-            txtIdClienteDueño.setText(String.valueOf(seguro.getIdClienteDueño()));
+            txtIdClienteDueño.setText(String.valueOf(seguro.getIdClienteDueno()));
         }
     }
 
@@ -144,9 +144,9 @@ public class SegurosController implements Initializable {
         LocalDate fechaInicio = dpFechaInicio.getValue();
         LocalDate fechaFin = dpFechaFin.getValue();
         double costo = txtCosto.getText().isEmpty() ? 0.0 : Double.parseDouble(txtCosto.getText());
-        int idClienteDueño = txtIdClienteDueño.getText().isEmpty() ? 0 : Integer.parseInt(txtIdClienteDueño.getText());
+        int idClienteDueno = txtIdClienteDueño.getText().isEmpty() ? 0 : Integer.parseInt(txtIdClienteDueño.getText());
         
-        return new Seguros(idSeguro, nombreSeguro, tipoSeguro, cobertura, fechaInicio, fechaFin, costo, idClienteDueño);
+        return new Seguros(idSeguro, nombreSeguro, tipoSeguro, cobertura, fechaInicio, fechaFin, costo, idClienteDueno);
     }
     
     private void agregarSeguro() {
@@ -159,7 +159,7 @@ public class SegurosController implements Initializable {
             cs.setDate(4, java.sql.Date.valueOf(modelo.getFechaInicio())); 
             cs.setDate(5, java.sql.Date.valueOf(modelo.getFechaFin())); 
             cs.setDouble(6, modelo.getCosto());
-            cs.setInt(7, modelo.getIdClienteDueño());
+            cs.setInt(7, modelo.getIdClienteDueno());
             cs.executeUpdate();
             cargarTablaSeguros();
             System.out.println("Seguro agregado con éxito.");
@@ -180,7 +180,7 @@ public class SegurosController implements Initializable {
             cs.setDate(5, java.sql.Date.valueOf(modelo.getFechaInicio())); 
             cs.setDate(6, java.sql.Date.valueOf(modelo.getFechaFin())); 
             cs.setDouble(7, modelo.getCosto());
-            cs.setInt(8, modelo.getIdClienteDueño());
+            cs.setInt(8, modelo.getIdClienteDueno());
             cs.executeUpdate();
             cargarTablaSeguros();
             System.out.println("Seguro actualizado.");
@@ -193,7 +193,7 @@ public class SegurosController implements Initializable {
     private void eliminarSeguro() {
         modelo = obtenerModelo();
         try {
-            CallableStatement cs = Conexion.getInstancia().getConexion().prepareCall("call sp_eliminarSeguro(?);");
+            CallableStatement cs = Conexion.getInstancia().getConexion().prepareCall("call sp_eliminarsSeguro(?);");
             cs.setInt(1, modelo.getIdSeguro());
             cs.executeUpdate();
             cargarTablaSeguros();
@@ -293,9 +293,6 @@ public class SegurosController implements Initializable {
         cambiarEstadoCampos(false);
         btnGuardar.setDisable(false);
         btnCancelar.setDisable(false);
-        btnNuevo.setDisable(true);
-        btnEditar.setDisable(true);
-        btnEliminar.setDisable(true);
         txtIdSeguro.setDisable(true); 
     }
 

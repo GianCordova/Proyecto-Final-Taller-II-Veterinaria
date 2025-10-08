@@ -231,7 +231,16 @@ create table Seguros (
     fechaFin date not null,               
     costo decimal(10,2) not null,          
     idClientedueño int,                    
-    foreign key (idclientedueño) references clientesdueños(idclientedueño)
+    foreign key (idClienteDueño) references ClientesDueños(idClienteDueño)
+);
+
+create table Usuarios (
+    idUsuario int auto_increment primary key,
+    correo varchar(128) not null unique,
+    contraseña varchar(255) not null,
+    rol enum('admin', 'cliente') not null,
+    idClienteDueño int,
+    foreign key (idClienteDueño) references ClientesDueños(idClienteDueño)
 );
 
 -- __________________________Procedimientos almacenados____________________________________________
@@ -1304,12 +1313,12 @@ delimiter ;
 
 
 delimiter //
-create procedure sp_eliminarsSeguro(in p_idseguro int)
-begin
-    update seguros
-    set estado = 'inactivo'
-    where idseguro = p_idseguro;
-end //
+	create procedure sp_eliminarsSeguro(in p_idSeguro int)
+		begin
+			delete 
+            from Seguros
+            where idSeguro = p_idSeguro;
+        end//
 delimiter ;
 
 -- ClientesDueños
@@ -1480,3 +1489,9 @@ call sp_agregarSeguro('Seguro de Vida', 'Vida', 'Cobertura médica integral', '2
 call sp_actualizarSeguro(1, 'Seguro de Vida', 'Vida', 'Cobertura mejorada en caso de accidente o muerte', '2025-01-01', '2025-12-31', 1300.00, 1);
 -- call sp_eliminarsSeguro(1);
 call sp_listarSeguros();
+
+INSERT INTO Usuarios (correo, contraseña, rol, idClienteDueño) VALUES
+( 'javier@gmail.com', 'contraseña123', 'admin',1),
+('giancarlo@gmail.com', 'contraseña123', 'cliente',1);
+ 
+select * from Usuarios;

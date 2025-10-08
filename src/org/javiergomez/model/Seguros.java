@@ -13,13 +13,13 @@ public class Seguros {
     private String cobertura;
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
-    private double costo;
-    private int idClienteDueño;
+    private double costo;   
+    private int idClienteDueno;
 
     public Seguros() {
     }
 
-    public Seguros(int idSeguro, String nombreSeguro, String tipoSeguro, String cobertura, LocalDate fechaInicio, LocalDate fechaFin, double costo, int idClienteDueño) {
+    public Seguros(int idSeguro, String nombreSeguro, String tipoSeguro, String cobertura, LocalDate fechaInicio, LocalDate fechaFin, double costo, int idClienteDueno) {
         this.idSeguro = idSeguro;
         this.nombreSeguro = nombreSeguro;
         this.tipoSeguro = tipoSeguro;
@@ -27,7 +27,7 @@ public class Seguros {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.costo = costo;
-        this.idClienteDueño = idClienteDueño;
+        this.idClienteDueno = idClienteDueno;
     }
 
     public int getIdSeguro() {
@@ -86,15 +86,15 @@ public class Seguros {
         this.costo = costo;
     }
 
-    public int getIdClienteDueño() {
-        return idClienteDueño;
+    public int getIdClienteDueno() {
+        return idClienteDueno;
     }
 
-    public void setIdClienteDueño(int idClienteDueño) {
-        this.idClienteDueño = idClienteDueño;
+    public void setIdClienteDueno(int idClienteDueno) {
+        this.idClienteDueno = idClienteDueno;
     }
-
-
+    
+   
     @Override
     public String toString() {
         return nombreSeguro + " | " + tipoSeguro + " | " + cobertura + " | " + fechaInicio + " | " + fechaFin + " | " + costo ;
