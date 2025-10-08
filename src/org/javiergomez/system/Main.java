@@ -25,6 +25,7 @@ import org.javiergomez.controller.InicioSecionController;
 import org.javiergomez.controller.MascotasController;
 import org.javiergomez.controller.MascotassController;
 import org.javiergomez.controller.MedicamentosController;
+import org.javiergomez.controller.MenuPrincipalAdministradorController;
 import org.javiergomez.controller.MenuPrincipalController;
 import org.javiergomez.controller.PantallaInicioController;
 import org.javiergomez.controller.PerroController;
@@ -244,6 +245,15 @@ public class Main extends Application {
                 
         public void Seguros() { 
         SegurosController pc = cambiarEscena("Seguros.fxml", 900, 700).getController(); 
+        pc.setPrincipal(this); } 
+        
+          public void MenuPrincipalAdministrador() { 
+        MenuPrincipalAdministradorController pc = cambiarEscena("MenuPrincipalAdministrador.fxml", 900, 700).getController(); 
         pc.setPrincipal(this); }  
 
+
+
 }
+
+
+

@@ -263,5 +263,6 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <Button fx:id="opo" layoutX="709.0" layoutY="622.0" mnemonicParsing="false" onAction="#clickActionInivio" prefHeight="52.0" prefWidth="118.0" text="Button" />
    </children>
 </AnchorPane>
