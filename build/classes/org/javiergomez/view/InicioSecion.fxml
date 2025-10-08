@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="fondo" stylesheets="@../resource/Proyecto.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.InicioSecionController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="fondo" stylesheets="@../resource/Proyecto.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiergomez.controller.InicioSecionController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" depthTest="ENABLE" fill="#e0f7fad9" height="700.0" layoutX="-2.0" layoutY="-1.0" stroke="BLACK" width="909.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00796b" height="424.0" layoutX="54.0" layoutY="252.0" stroke="BLACK" strokeType="INSIDE" styleClass="tamano" width="798.0" />
@@ -67,8 +67,8 @@
             <String fx:value="boton" />
          </styleClass>
       </Button>
-      <PasswordField layoutX="332.0" layoutY="464.0" prefHeight="46.0" prefWidth="266.0" promptText="***********" styleClass="tamano" />
-      <TextField layoutX="333.0" layoutY="387.0" prefHeight="46.0" prefWidth="265.0" promptText="root.root@gmail.com" styleClass="tamano" />
+      <PasswordField fx:id="txtContrasena" layoutX="332.0" layoutY="464.0" onAction="#clickActionHandler" prefHeight="46.0" prefWidth="266.0" promptText="***********" styleClass="tamano" />
+      <TextField fx:id="txtCorreo" layoutX="333.0" layoutY="387.0" onAction="#clickActionHandler" prefHeight="46.0" prefWidth="265.0" promptText="root.root@gmail.com" styleClass="tamano" />
       <ImageView fitHeight="294.0" fitWidth="254.0" layoutX="308.0" layoutY="67.0" pickOnBounds="true" smooth="false">
          <image>
             <Image url="@../image/inicio-removebg-preview.png" />

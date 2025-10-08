@@ -3,14 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jgome/OneDrive/Documentos/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/model/servicios.java</file>
-            <file>file:/C:/Users/jgome/OneDrive/Documentos/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/model/Citas.java</file>
-            <file>file:/C:/Users/jgome/OneDrive/Documentos/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/controller/VeterinariosController.java</file>
-            <file>file:/C:/Users/jgome/OneDrive/Documentos/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/model/VerCitas.java</file>
-            <file>file:/C:/Users/jgome/OneDrive/Documentos/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/model/Veterinarios.java</file>
-            <file>file:/C:/Users/jgome/OneDrive/Documentos/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/controller/VerCitasController.java</file>
-            <file>file:/C:/Users/jgome/OneDrive/Documentos/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/system/Main.java</file>
-            <file>file:/C:/Users/jgome/OneDrive/Documentos/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/controller/CitasController.java</file>
+            <file>file:/C:/Users/Informatica/Documents/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/system/Main.java</file>
+            <file>file:/C:/Users/Informatica/Documents/Proyecto-Final-Taller-II-Veterinaria/src/org/javiergomez/db/Conexion.java</file>
         </group>
     </open-files>
 </project-private>
