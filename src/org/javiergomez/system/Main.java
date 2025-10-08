@@ -32,6 +32,7 @@ import org.javiergomez.controller.PlanesController;
 import org.javiergomez.controller.RecetaMedicamentoController;
 import org.javiergomez.controller.RecetasController;
 import org.javiergomez.controller.RegistrarseController;
+import org.javiergomez.controller.SegurosController;
 import org.javiergomez.controller.ServicioController;
 import org.javiergomez.controller.ServiciosController;
 import org.javiergomez.controller.TratamientoMedicoController;
@@ -41,6 +42,7 @@ import org.javiergomez.controller.VerCitasController;
 import org.javiergomez.controller.VeterinariaController;
 import org.javiergomez.controller.VeterinarioController;
 import org.javiergomez.controller.VeterinariosController;
+import org.javiergomez.model.Seguros;
 
 /**
  *
