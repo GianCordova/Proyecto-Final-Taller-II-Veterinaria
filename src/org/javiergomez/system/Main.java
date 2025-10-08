@@ -37,6 +37,7 @@ import org.javiergomez.controller.ServiciosController;
 import org.javiergomez.controller.TratamientoMedicoController;
 import org.javiergomez.controller.TratamientosController;
 import org.javiergomez.controller.VacunacionesController;
+import org.javiergomez.controller.VerCitasController;
 import org.javiergomez.controller.VeterinariaController;
 import org.javiergomez.controller.VeterinarioController;
 import org.javiergomez.controller.VeterinariosController;
@@ -234,5 +235,9 @@ public class Main extends Application {
         ContactoAdoptameController pc = cambiarEscena("ContactoAdoptame.fxml", 900, 700).getController();
         pc.setPrincipal(this);
     }
-
+                public void VerCitas() {
+        VerCitasController pc = cambiarEscena("VerCitas.fxml", 946, 566).getController();
+        pc.setPrincipal(this);
+    }
+            
 }

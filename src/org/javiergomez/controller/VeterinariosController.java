@@ -69,7 +69,7 @@ public class VeterinariosController implements Initializable {
     @FXML
     private TextField txtBuscar,txtIDVeterinarios, txtIDEmpleado, txtnombreVeterinarios,txtapellidoVeterinarios,txtSueldo;
     @FXML
-    private Button btnAnterior, btnSiguiente, btnNuevo, btnEditar, btnEliminar, btnGuardar, btnCancelar;
+    private Button btnAnterior, btnSiguiente, btnNuevo, btnEditar, btnEliminar, btnGuardar, btnCancelar,VerCita;
     @FXML
     private ComboBox<Empleados> cbxEmpleado;
     
@@ -88,6 +88,9 @@ public class VeterinariosController implements Initializable {
     if (evento.getSource() == re) {
             System.out.println("Nos vamos a contacto");
             principal.menuPrincipal();
+    }else if (evento.getSource() == VerCita) {
+            System.out.println("Enviado a servicios");
+            principal.VerCitas();
     }
     }
     
