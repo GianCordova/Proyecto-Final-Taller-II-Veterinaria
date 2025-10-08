@@ -239,5 +239,7 @@ public class Main extends Application {
         VerCitasController pc = cambiarEscena("VerCitas.fxml", 946, 566).getController();
         pc.setPrincipal(this);
     }
-            
+        public void Seguros() { 
+      SegurosController pc = cambiarEscena("Seguros.fxml", 900, 700).getController(); pc.setPrincipal(this); 
+    }
 }
